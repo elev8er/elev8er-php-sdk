@@ -1,0 +1,45 @@
+{
+    "name": "elev8er/elev8er-php-sdk",
+    "version": "1.0.0",
+    "description": "Team-scoped public API for elev8er. Authenticate every request with an API key issued per team (`X-API-Key` header). Keys are created and managed from the elev8er panel (Team › API Keys). This API is intended for **server-to-server** use — never expose your API key in a browser or mobile client.  **Rate limiting:** every response includes `X-RateLimit-Limit`, `X-RateLimit-Remaining` and `X-RateLimit-Reset` headers. When the limit is exceeded the API returns `429 Too Many Requests`.",
+    "keywords": [
+        "openapitools",
+        "openapi-generator",
+        "openapi",
+        "php",
+        "sdk",
+        "rest",
+        "api"
+    ],
+    "homepage": "https://elev8er.ai",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "elev8er",
+            "email": "support@elev8er.ai",
+            "homepage": "https://elev8er.ai"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "friendsofphp/php-cs-fixer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elev8er\\PublicApi\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Elev8er\\PublicApi\\Test\\": "test/"
+        }
+    }
+}
